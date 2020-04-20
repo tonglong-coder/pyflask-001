@@ -44,8 +44,9 @@ def giaiptb1():
     if a == 0 and b == 0:
         str = "VSN"
     elif a != 0:
-        x =  str(-b/a)
-        str = "nghiem x=" + x
+        x =  -b/a
+        x = str(x)
+        str = "nghiem x=" , x
     else:
         str = "KoCoN"
     return str
