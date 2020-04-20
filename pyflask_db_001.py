@@ -45,7 +45,6 @@ def giaiptb1():
         str = "VSN"
     elif a != 0:
         x =  -b/a
-        x = str(x)
         str = "nghiem x=" , x
     else:
         str = "KoCoN"
