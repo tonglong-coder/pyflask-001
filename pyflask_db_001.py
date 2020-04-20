@@ -40,15 +40,20 @@ def giaiptb1():
     b = int(b)
 
     str = "khong co nghiem"
+    
+    kq = { "tt" : str }
 
     if a == 0 and b == 0:
         str = "VSN"
+        kq = { "tt" : str }
     elif a != 0:
         x =  -b/a
-        str = "nghiem x=" , x
+        str = "co 1 nghiem"
+        kq = { "tt" : str , "x" : x}
     else:
         str = "KoCoN"
-    return str
+        kq = { "tt" : str }
+    return jsonify(kq)
 
 class Parameters(Resource):
     def get(self, firstParam):
