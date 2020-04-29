@@ -1,3 +1,5 @@
+from math import *
+
 from flask import  (
     Flask,
     render_template,
@@ -18,17 +20,23 @@ def  index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def  login():
+    query_parameters = request.args
+    vusername = query_parameters.get("username")
+    vpassword = query_parameters.get("password")
     return render_template("login.html")
 
 @app.route('/profile')
 def  profile():
     return render_template("profile.html")
 
+@app.route('/services')
+def  call_services():
+    return render_template("call_api.html")
+
 @app.route('/params', methods=['GET'])
 def api_filter():
     query_parameters = request.args
     return jsonify(query_parameters)
-
 
 @app.route('/giaiptb1', methods=['GET'])
 def giaiptb1():
